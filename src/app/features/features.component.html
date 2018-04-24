@@ -1,0 +1,22 @@
+<div class="text-center container" id="bloc_features">
+  <h1 class="display-4">{{title}}</h1>
+  <div class="btn-group " role="group">
+    <button type="button" *ngFor="let part of data" (click)="changeFeature(part.title)" [name]="part.id" class="btn btn-dark" style="margin-top: 20px; margin-bottom: 10px; width: 100px" fxLayoutAlign="center" fxLayout.xs="0%">
+      {{part.title}}
+    </button>
+  </div>
+  <div *ngFor="let part of data">
+    <div *ngIf="activeElement === part.title">
+      <div class="row">
+        <div class="col-12">
+          <img [src]="part.image" style="width: 100%; object-fit: contain">
+        </div>
+      </div>
+      <div class="content ">
+        <h2 style="margin-top: 20px">{{part.title}}</h2>
+        <p class="text-justify" style="margin-top: 10px">{{part.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
