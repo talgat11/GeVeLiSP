@@ -1,7 +1,8 @@
 
 <div class="text-center bg-1 " id="bloc_team">
   <div class="container">
-    <h1 class="display-4"> {{ title }} </h1>
+    <h1 *showItBootstrap="['xs','sm']" class="display-4">{{title}}</h1>
+    <h1 *showItBootstrap="['md','lg','xl']" class="display-3">{{title}}</h1>
     <div class="row">
       <div class=" col-md-4 col-sm-6" style="margin-top: 50px" *ngFor="let member of data">
         <img [src]="member.image" class="img-responsive rounded-circle" style="width: 30%; height: auto; object-fit: contain">

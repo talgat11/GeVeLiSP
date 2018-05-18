@@ -1,7 +1,13 @@
 <div class="text-center container" id="bloc_features">
-  <h1 class="display-4">{{title}}</h1>
-  <div class="btn-group " role="group">
-    <button type="button" *ngFor="let part of data" (click)="changeFeature(part.title)" [name]="part.id" class="btn btn-dark" style="margin-top: 20px; margin-bottom: 10px; width: 100px" fxLayoutAlign="center" fxLayout.xs="0%">
+  <h1 *showItBootstrap="['xs','sm']" class="display-4">{{title}}</h1>
+  <h1 *showItBootstrap="['md','lg', 'xl']" class="display-3">{{title}}</h1>
+  <div *showItBootstrap="['md','lg','sm', 'xl']" class="btn-group " role="group">
+    <button type="button" *ngFor="let part of data" (click)="changeFeature(part.title)" [name]="part.id" class="btn btn-dark" style="margin-top: 20px; margin-bottom: 10px; width: auto" fxLayoutAlign="center">
+      {{part.title}}
+    </button>
+  </div>
+  <div *showItBootstrap="['xs']" class="btn-group-vertical " role="group">
+    <button type="button" *ngFor="let part of data" (click)="changeFeature(part.title)" class="btn btn-dark" style="width: 100px" fxLayoutAlign="center">
       {{part.title}}
     </button>
   </div>

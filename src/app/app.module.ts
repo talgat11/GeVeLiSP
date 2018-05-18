@@ -12,6 +12,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {AgmCoreModule} from '@agm/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {ResponsiveModule} from 'ng2-responsive';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     NgbModule.forRoot(),
     Ng2PageScrollModule,
     AgmCoreModule.forRoot({apiKey: 'AIzaSyBjtzdOyCDiQ4EAuX9hmslTlQsXAsZ6800'}),
-    FlexLayoutModule
+    FlexLayoutModule,
+    ResponsiveModule
   ],
   providers: [
     GeneralService

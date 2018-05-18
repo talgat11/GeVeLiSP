@@ -13,7 +13,7 @@ export class GeneralService {
   }
 
   getGeneral() {
-    return this.http.get('/assets/data.json');
+    return this.http.get('assets/data.json');
   }
 
   // getGeneralResponse(): Observable<HttpResponse<General>> {
